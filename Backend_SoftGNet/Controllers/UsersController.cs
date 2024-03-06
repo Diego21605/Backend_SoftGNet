@@ -7,53 +7,52 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Backend_SoftGNet.Data;
 using Backend_SoftGNet.Models;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Backend_SoftGNet.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController, Authorize]
-    public class DriversController : ControllerBase
+    [ApiController]
+    public class UsersController : ControllerBase
     {
         private readonly dataContext _context;
 
-        public DriversController(dataContext context)
+        public UsersController(dataContext context)
         {
             _context = context;
         }
 
-        // GET: api/Drivers
+        // GET: api/Users
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Drivers>>> GetDrivers()
+        public async Task<ActionResult<IEnumerable<Users>>> GetUsers()
         {
-            return await _context.Drivers.ToListAsync();
+            return await _context.Users.ToListAsync();
         }
 
-        // GET: api/Drivers/5
+        // GET: api/Users/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Drivers>> GetDrivers(int id)
+        public async Task<ActionResult<Users>> GetUsers(int id)
         {
-            var drivers = await _context.Drivers.FindAsync(id);
+            var users = await _context.Users.FindAsync(id);
 
-            if (drivers == null)
+            if (users == null)
             {
                 return NotFound();
             }
 
-            return drivers;
+            return users;
         }
 
-        // PUT: api/Drivers/5
+        // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutDrivers(int id, Drivers drivers)
+        public async Task<IActionResult> PutUsers(int id, Users users)
         {
-            if (id != drivers.Id)
+            if (id != users.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(drivers).State = EntityState.Modified;
+            _context.Entry(users).State = EntityState.Modified;
 
             try
             {
@@ -61,7 +60,7 @@ namespace Backend_SoftGNet.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!DriversExists(id))
+                if (!UsersExists(id))
                 {
                     return NotFound();
                 }
@@ -74,36 +73,36 @@ namespace Backend_SoftGNet.Controllers
             return NoContent();
         }
 
-        // POST: api/Drivers
+        // POST: api/Users
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Drivers>> PostDrivers(Drivers drivers)
+        public async Task<ActionResult<Users>> PostUsers(Users users)
         {
-            _context.Drivers.Add(drivers);
+            _context.Users.Add(users);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetDrivers", new { id = drivers.Id }, drivers);
+            return CreatedAtAction("GetUsers", new { id = users.Id }, users);
         }
 
-        // DELETE: api/Drivers/5
+        // DELETE: api/Users/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteDrivers(int id)
+        public async Task<IActionResult> DeleteUsers(int id)
         {
-            var drivers = await _context.Drivers.FindAsync(id);
-            if (drivers == null)
+            var users = await _context.Users.FindAsync(id);
+            if (users == null)
             {
                 return NotFound();
             }
 
-            _context.Drivers.Remove(drivers);
+            _context.Users.Remove(users);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool DriversExists(int id)
+        private bool UsersExists(int id)
         {
-            return _context.Drivers.Any(e => e.Id == id);
+            return _context.Users.Any(e => e.Id == id);
         }
     }
 }

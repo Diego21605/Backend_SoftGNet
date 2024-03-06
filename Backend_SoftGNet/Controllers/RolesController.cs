@@ -7,53 +7,52 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Backend_SoftGNet.Data;
 using Backend_SoftGNet.Models;
-using Microsoft.AspNetCore.Authorization;
 
 namespace Backend_SoftGNet.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController, Authorize]
-    public class DriversController : ControllerBase
+    [ApiController]
+    public class RolesController : ControllerBase
     {
         private readonly dataContext _context;
 
-        public DriversController(dataContext context)
+        public RolesController(dataContext context)
         {
             _context = context;
         }
 
-        // GET: api/Drivers
+        // GET: api/Roles
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Drivers>>> GetDrivers()
+        public async Task<ActionResult<IEnumerable<Role>>> GetRole()
         {
-            return await _context.Drivers.ToListAsync();
+            return await _context.Role.ToListAsync();
         }
 
-        // GET: api/Drivers/5
+        // GET: api/Roles/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Drivers>> GetDrivers(int id)
+        public async Task<ActionResult<Role>> GetRole(int id)
         {
-            var drivers = await _context.Drivers.FindAsync(id);
+            var role = await _context.Role.FindAsync(id);
 
-            if (drivers == null)
+            if (role == null)
             {
                 return NotFound();
             }
 
-            return drivers;
+            return role;
         }
 
-        // PUT: api/Drivers/5
+        // PUT: api/Roles/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutDrivers(int id, Drivers drivers)
+        public async Task<IActionResult> PutRole(int id, Role role)
         {
-            if (id != drivers.Id)
+            if (id != role.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(drivers).State = EntityState.Modified;
+            _context.Entry(role).State = EntityState.Modified;
 
             try
             {
@@ -61,7 +60,7 @@ namespace Backend_SoftGNet.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!DriversExists(id))
+                if (!RoleExists(id))
                 {
                     return NotFound();
                 }
@@ -74,36 +73,36 @@ namespace Backend_SoftGNet.Controllers
             return NoContent();
         }
 
-        // POST: api/Drivers
+        // POST: api/Roles
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Drivers>> PostDrivers(Drivers drivers)
+        public async Task<ActionResult<Role>> PostRole(Role role)
         {
-            _context.Drivers.Add(drivers);
+            _context.Role.Add(role);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetDrivers", new { id = drivers.Id }, drivers);
+            return CreatedAtAction("GetRole", new { id = role.Id }, role);
         }
 
-        // DELETE: api/Drivers/5
+        // DELETE: api/Roles/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteDrivers(int id)
+        public async Task<IActionResult> DeleteRole(int id)
         {
-            var drivers = await _context.Drivers.FindAsync(id);
-            if (drivers == null)
+            var role = await _context.Role.FindAsync(id);
+            if (role == null)
             {
                 return NotFound();
             }
 
-            _context.Drivers.Remove(drivers);
+            _context.Role.Remove(role);
             await _context.SaveChangesAsync();
 
             return NoContent();
         }
 
-        private bool DriversExists(int id)
+        private bool RoleExists(int id)
         {
-            return _context.Drivers.Any(e => e.Id == id);
+            return _context.Role.Any(e => e.Id == id);
         }
     }
 }
