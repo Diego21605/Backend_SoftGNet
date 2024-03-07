@@ -5,6 +5,7 @@ namespace Backend_SoftGNet.Models
 {
     public class Users
     {
+#pragma warning disable CS8618 // Un campo que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de declararlo como que admite un valor NULL.
         [Key, Column(Order = 1)]
         public int Id { get; set; }
 
@@ -23,5 +24,6 @@ namespace Backend_SoftGNet.Models
 
         [Column(Order = 6), Required]
         public bool Active { get; set; }
+#pragma warning restore CS8618 // Un campo que no acepta valores NULL debe contener un valor distinto de NULL al salir del constructor. Considere la posibilidad de declararlo como que admite un valor NULL.
     }
 }

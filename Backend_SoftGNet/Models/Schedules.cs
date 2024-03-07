@@ -12,7 +12,7 @@ namespace Backend_SoftGNet.Models
 
         [Column(Order = 2), Required]
         public int Route_Id { get; set; }
-        public Routes Route { get; set; }
+        public Routes? Route { get; set; }
 
         [Column(Order = 3), Required]
         public int Week_Num { get; set; }

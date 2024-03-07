@@ -13,23 +13,23 @@ namespace Backend_SoftGNet.Controllers
 {
     [Route("api/[controller]")]
     [ApiController, Authorize]
-    public class RoutesController : ControllerBase
+    public class RoutesVehiclesController : ControllerBase
     {
         private readonly dataContext _context;
 
-        public RoutesController(dataContext context)
+        public RoutesVehiclesController(dataContext context)
         {
             _context = context;
         }
 
-        // GET: api/Routes
+        // GET: api/RoutesVehicles
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Routes>>> GetRoute()
         {
             return await _context.Route.ToListAsync();
         }
 
-        // GET: api/Routes/5
+        // GET: api/RoutesVehicles/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Routes>> GetRoutes(int id)
         {
@@ -43,7 +43,29 @@ namespace Backend_SoftGNet.Controllers
             return routes;
         }
 
-        // PUT: api/Routes/5
+        [HttpGet("getRoutes")]
+        public ActionResult GetRoutes()
+        {
+            var routes = from r in _context.Set<Routes>()
+                         join d in _context.Set<Drivers>() on r.Driver_Id equals d.Id
+                         join v in _context.Set<Vehicles>() on r.Vehicle_Id equals v.Id
+                         where d.Active == true &&
+                               v.Active == true
+                         select new
+                         {
+                             r.Id,
+                             r.Description,
+                             Driver_Id = d.Id,
+                             Driver = d.First_name + " " + d.Last_name,
+                             Vehicle_Id = v.Id,
+                             Vehicle = v.Description,
+                             r.Active,
+                         };
+
+            return Ok(routes);
+        }
+
+        // PUT: api/RoutesVehicles/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutRoutes(int id, Routes routes)
@@ -74,7 +96,7 @@ namespace Backend_SoftGNet.Controllers
             return NoContent();
         }
 
-        // POST: api/Routes
+        // POST: api/RoutesVehicles
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Routes>> PostRoutes(Routes routes)
@@ -85,7 +107,7 @@ namespace Backend_SoftGNet.Controllers
             return CreatedAtAction("GetRoutes", new { id = routes.Id }, routes);
         }
 
-        // DELETE: api/Routes/5
+        // DELETE: api/RoutesVehicles/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteRoutes(int id)
         {

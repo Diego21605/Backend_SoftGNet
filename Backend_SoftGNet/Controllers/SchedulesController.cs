@@ -43,6 +43,25 @@ namespace Backend_SoftGNet.Controllers
             return schedules;
         }
 
+        [HttpGet("getSchedulers")]
+        public ActionResult GetSchedulers()
+        {
+            var schedulers = from s in _context.Set<Schedules>()
+                             join r in _context.Set<Routes>() on s.Route_Id equals r.Id
+                             select new
+                             {
+                                 s.Id,
+                                 Route_Id = r.Id,
+                                 Route = r.Description,
+                                 s.Week_Num,
+                                 s.From,
+                                 s.To,
+                                 s.Active
+                             };
+
+            return Ok(schedulers);
+        }
+
         // PUT: api/Schedules/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

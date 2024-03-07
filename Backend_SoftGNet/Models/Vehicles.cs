@@ -10,7 +10,7 @@ namespace Backend_SoftGNet.Models
         public int Id { get; set; }
 
         [Column(Order = 2, TypeName = "varchar(200)"), Required]
-        public string Descripcion { get; set; }
+        public string Description { get; set; }
 
         [Column(Order = 3), Required]
         public int Year { get; set; }

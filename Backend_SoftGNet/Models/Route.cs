@@ -11,7 +11,7 @@ namespace Backend_SoftGNet.Models
         public int Id { get; set; }
 
         [Column(Order = 2, TypeName = "varchar(max)"), Required]
-        public string Descripcion { get; set; }
+        public string Description { get; set; }
 
         [Column(Order = 3), Required]
         public int Driver_Id { get; set; }
