@@ -5,7 +5,7 @@ namespace Backend_SoftGNet.Models
 {
     public class Users
     {
-        [Key, Column(Order = 1), Required]
+        [Key, Column(Order = 1)]
         public int Id { get; set; }
 
         [Column(Order = 2, TypeName = "varchar(200)"), Required]
