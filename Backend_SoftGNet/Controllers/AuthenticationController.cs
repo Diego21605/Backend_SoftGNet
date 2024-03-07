@@ -20,7 +20,7 @@ namespace Backend_SoftGNet.Controllers
         public IActionResult Login([FromBody] Login user)
         {
             if (user is null) return BadRequest("Usuairo Invalido");
-            var res = _context.Users.Where(x => x.User_Email == user.User_Email && x.User_Password == user.Password && x.Active == true).First();
+            var res = _context.Users.Where(x => x.User_Email == user.Email && x.User_Password == user.Password && x.Active == true).First();
 
 #pragma warning disable CS8604 // Posible argumento de referencia nulo
             if (res != null)

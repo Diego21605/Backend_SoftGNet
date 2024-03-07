@@ -196,6 +196,11 @@ namespace Backend_SoftGNet.Migrations
                         .HasColumnType("varchar(200)")
                         .HasColumnOrder(2);
 
+                    b.Property<string>("User_Password")
+                        .IsRequired()
+                        .HasColumnType("varchar(max)")
+                        .HasColumnOrder(4);
+
                     b.HasKey("Id");
 
                     b.HasIndex("Role_Id");

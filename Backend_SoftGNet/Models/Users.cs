@@ -15,7 +15,7 @@ namespace Backend_SoftGNet.Models
         public string? User_Email { get; set;}
 
         [Column(Order = 4, TypeName = "varchar(max)"), Required]
-        public string User_Password { get;}
+        public string User_Password { get; set;  }
 
         [Column(Order = 5), Required]
         public int Role_Id { get; set; }
