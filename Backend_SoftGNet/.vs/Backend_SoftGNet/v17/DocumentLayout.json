@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|c:\\users\\diego fernandez\\documents\\github\\backend_softgnet\\backend_softgnet\\controllers\\vehiclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|solutionrelative:controllers\\vehiclescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|c:\\users\\diego fernandez\\documents\\github\\backend_softgnet\\backend_softgnet\\controllers\\schedulescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|solutionrelative:controllers\\schedulescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|c:\\users\\diego fernandez\\documents\\github\\backend_softgnet\\backend_softgnet\\controllers\\routescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|solutionrelative:controllers\\routescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|c:\\users\\diego fernandez\\documents\\github\\backend_softgnet\\backend_softgnet\\controllers\\driverscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|solutionrelative:controllers\\driverscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|c:\\users\\diego fernandez\\documents\\github\\backend_softgnet\\backend_softgnet\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|solutionrelative:controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|c:\\users\\diego fernandez\\documents\\github\\backend_softgnet\\backend_softgnet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|c:\\users\\diego fernandez\\documents\\github\\backend_softgnet\\backend_softgnet\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|solutionrelative:models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|c:\\users\\diego fernandez\\documents\\github\\backend_softgnet\\backend_softgnet\\services\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|solutionrelative:services\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D7A73E16-D349-4AF1-995F-13404E7A1435}|Backend_SoftGNet.csproj|c:\\users\\diego fernandez\\documents\\github\\backend_softgnet\\backend_softgnet\\data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,85 +30,72 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "dataContext.cs",
               "DocumentMoniker": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Data\\dataContext.cs",
               "RelativeDocumentMoniker": "Data\\dataContext.cs",
               "ToolTip": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Data\\dataContext.cs",
               "RelativeToolTip": "Data\\dataContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA1AAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA5wBMAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-06T02:37:24.341Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "VehiclesController.cs",
-              "DocumentMoniker": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Controllers\\VehiclesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\VehiclesController.cs",
-              "ToolTip": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Controllers\\VehiclesController.cs",
-              "RelativeToolTip": "Controllers\\VehiclesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T03:39:09.243Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SchedulesController.cs",
-              "DocumentMoniker": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Controllers\\SchedulesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SchedulesController.cs",
-              "ToolTip": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Controllers\\SchedulesController.cs",
-              "RelativeToolTip": "Controllers\\SchedulesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T03:38:43.688Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RoutesController.cs",
-              "DocumentMoniker": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Controllers\\RoutesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RoutesController.cs",
-              "ToolTip": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Controllers\\RoutesController.cs",
-              "RelativeToolTip": "Controllers\\RoutesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T03:38:10.339Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DriversController.cs",
-              "DocumentMoniker": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Controllers\\DriversController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DriversController.cs",
-              "ToolTip": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Controllers\\DriversController.cs",
-              "RelativeToolTip": "Controllers\\DriversController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T03:37:32.883Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAADUAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-06T03:27:05.276Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Models\\Users.cs",
+              "RelativeDocumentMoniker": "Models\\Users.cs",
+              "ToolTip": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Models\\Users.cs",
+              "RelativeToolTip": "Models\\Users.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T04:24:49.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Services\\Login.cs",
+              "RelativeDocumentMoniker": "Services\\Login.cs",
+              "ToolTip": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Services\\Login.cs",
+              "RelativeToolTip": "Services\\Login.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T04:24:15.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Controllers\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthenticationController.cs",
+              "ToolTip": "C:\\Users\\Diego Fernandez\\Documents\\GitHub\\Backend_SoftGNet\\Backend_SoftGNet\\Controllers\\AuthenticationController.cs",
+              "RelativeToolTip": "Controllers\\AuthenticationController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwBYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T03:48:58.482Z",
               "EditorCaption": ""
             }
           ]

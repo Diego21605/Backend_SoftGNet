@@ -7,11 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Backend_SoftGNet.Data;
 using Backend_SoftGNet.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Backend_SoftGNet.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
+    [ApiController, Authorize]
     public class DriversController : ControllerBase
     {
         private readonly dataContext _context;

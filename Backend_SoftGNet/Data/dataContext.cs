@@ -16,6 +16,8 @@ namespace Backend_SoftGNet.Data
         public DbSet<Vehicles> Vehicles { get; set; }
         public DbSet<Routes> Route { get; set; }
         public DbSet<Schedules> Schedules { get; set; }
+        public DbSet<Role> Role { get; set; }
+        public DbSet<Users> Users { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -26,6 +28,9 @@ namespace Backend_SoftGNet.Data
 
             //Schedules
             modelBuilder.Entity<Schedules>().HasOne(x => x.Route).WithMany().HasForeignKey(y => y.Route_Id).OnDelete(DeleteBehavior.Restrict);
+
+            //Users
+            modelBuilder.Entity<Users>().HasOne(x => x.Role).WithMany().HasForeignKey(y => y.Role_Id).OnDelete(DeleteBehavior.Restrict);
         }
 
     }

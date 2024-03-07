@@ -75,6 +75,30 @@ namespace Backend_SoftGNet.Migrations
                     b.ToTable("Drivers");
                 });
 
+            modelBuilder.Entity("Backend_SoftGNet.Models.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("varchar(max)")
+                        .HasColumnOrder(3);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)")
+                        .HasColumnOrder(2);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Role");
+                });
+
             modelBuilder.Entity("Backend_SoftGNet.Models.Routes", b =>
                 {
                     b.Property<int>("Id")
@@ -146,6 +170,44 @@ namespace Backend_SoftGNet.Migrations
                     b.ToTable("Schedules");
                 });
 
+            modelBuilder.Entity("Backend_SoftGNet.Models.Users", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnOrder(1);
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit")
+                        .HasColumnOrder(6);
+
+                    b.Property<int>("Role_Id")
+                        .HasColumnType("int")
+                        .HasColumnOrder(5);
+
+                    b.Property<string>("User_Email")
+                        .HasColumnType("varchar(200)")
+                        .HasColumnOrder(3);
+
+                    b.Property<string>("User_Name")
+                        .IsRequired()
+                        .HasColumnType("varchar(200)")
+                        .HasColumnOrder(2);
+
+                    b.Property<string>("User_Password")
+                        .IsRequired()
+                        .HasColumnType("varchar(max)")
+                        .HasColumnOrder(4);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Role_Id");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("Backend_SoftGNet.Models.Vehicles", b =>
                 {
                     b.Property<int>("Id")
@@ -209,6 +271,17 @@ namespace Backend_SoftGNet.Migrations
                         .IsRequired();
 
                     b.Navigation("Route");
+                });
+
+            modelBuilder.Entity("Backend_SoftGNet.Models.Users", b =>
+                {
+                    b.HasOne("Backend_SoftGNet.Models.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("Role_Id")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Role");
                 });
 #pragma warning restore 612, 618
         }
