@@ -6,6 +6,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Backend_SoftGNet.Services;
+using Intercom.Data;
 
 namespace Backend_SoftGNet.Controllers
 {
@@ -20,7 +21,11 @@ namespace Backend_SoftGNet.Controllers
         public IActionResult Login([FromBody] Login user)
         {
             if (user is null) return BadRequest("Usuairo Invalido");
-            var res = _context.Users.Where(x => x.User_Email == user.Email && x.User_Password == user.Password && x.Active == true).First();
+            var res = (from u in _context.Users
+                       where u.User_Email == user.Email &&
+                             u.User_Password == user.Password &&
+                             u.Active == true
+                       select u).FirstOrDefault();
 
 #pragma warning disable CS8604 // Posible argumento de referencia nulo
             if (res != null)
