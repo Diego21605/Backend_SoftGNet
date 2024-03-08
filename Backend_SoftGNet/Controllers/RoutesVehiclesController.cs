@@ -49,8 +49,6 @@ namespace Backend_SoftGNet.Controllers
             var routes = from r in _context.Set<Routes>()
                          join d in _context.Set<Drivers>() on r.Driver_Id equals d.Id
                          join v in _context.Set<Vehicles>() on r.Vehicle_Id equals v.Id
-                         where d.Active == true &&
-                               v.Active == true
                          select new
                          {
                              r.Id,

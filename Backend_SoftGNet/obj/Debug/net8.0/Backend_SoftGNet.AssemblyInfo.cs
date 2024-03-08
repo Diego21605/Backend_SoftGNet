@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Backend_SoftGNet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+795f0f59f2748ac771c57c897a0903172d084a73")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+849b2dc112bf95b1fa63fc228c2aedbb882e05d2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Backend_SoftGNet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Backend_SoftGNet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
